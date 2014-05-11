@@ -14,9 +14,13 @@ handlers:
 
   # Serve php scripts.
 - url: /
-  script: main2.php
+  script: about.php
+
 - url: /(.+\.php)$
   script: \1
+  
+- url: /bootstrap.min.js
+  script: bootstrap.min.js
 #- url: /.*
 #  script: main.php
   

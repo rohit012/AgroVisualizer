@@ -1,15 +1,26 @@
-<!--
-You are free to copy and use this sample in accordance with the terms of the
-Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
--->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>
-      Google Visualization API Sample
-    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Agro-Visualizer </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="styles/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="styles/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
+
     <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript">
@@ -26,20 +37,6 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
           
         };
 
-       /* var serverData2 = $.ajax({
-          url: 'yearwisecomparison2.json',
-          dataType: 'json',
-          context: document.getElementById('chart22'),
-          success: function (serverData2) {
-
-            data2 = new google.visualization.DataTable(serverData2);
-            chart22 = new google.visualization.LineChart(document.getElementById('chart22'));
-            chart22.draw(data2, options2);
-
-            console.log(data2);
-          }
-        });
-*/
         var serverData = $.ajax({
           type: "POST",
           url: '/routes/mainRouter.php',
@@ -136,10 +133,39 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
 
       google.setOnLoadCallback(drawVisualization);
     </script>
+
+
   </head>
-  <body style="font-family: Arial;border: 0 none;">
-    
-    <div id="dashboard">
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="about.php">Agro Visualizer</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="work.html">Yearwise Analysis</a></li>
+            <li><a href="about.html">Countywise Analysis</a></li>
+            <li><a href="blog.html">Year Vs County</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	
+	
+
+	<div id="dashboard">
       
 
       <table>
@@ -162,8 +188,49 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
 
       
     </div>
-          <a href="/YearVsProd.php">Year Vs Prod</a>
+    
+	<!-- +++++ Information Section +++++ -->
+	
+	
+		
+	</div><!-- /container -->
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>Copright</h4>
+					<p>
+						CMPE-272, SJSU
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						
+						<a href="http://twitter.com">Follow us on Twitter</a><br/>
+						<a href="http://facebook.com">Like us on Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>About Agro-Visualizer</h4>
+					<p>AgroVisualizer is a data visualizer app to check California agriculture data and get statistical analysis for past 7 years.</p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap.min.js"></script>
   </body>
 </html>
-​
