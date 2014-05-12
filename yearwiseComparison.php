@@ -1,14 +1,11 @@
-<!--
-You are free to copy and use this sample in accordance with the terms of the
-Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
--->
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>
-      Google Visualization API Sample
+      Agro Visualizer
     </title>
     <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -26,20 +23,7 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
           
         };
 
-       /* var serverData2 = $.ajax({
-          url: 'yearwisecomparison2.json',
-          dataType: 'json',
-          context: document.getElementById('chart22'),
-          success: function (serverData2) {
-
-            data2 = new google.visualization.DataTable(serverData2);
-            chart22 = new google.visualization.LineChart(document.getElementById('chart22'));
-            chart22.draw(data2, options2);
-
-            console.log(data2);
-          }
-        });
-*/
+    
         var serverData = $.ajax({
           type: "POST",
           url: '/routes/mainRouter.php',

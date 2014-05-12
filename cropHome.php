@@ -107,10 +107,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Yearwise Analysis</a></li>
-            <li><a href="about.html">Countywise Analysis</a></li>
-            <li><a href="blog.html">Year Vs County</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
+            <li><a href="predictProduction.php">Production Prediction</a></li>
+            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -132,8 +132,7 @@
           </td>
           <td style='width: 600px'>
             <div style="float: left;" id="chart1"></div>
-            <div style="float: left;" id="chart2"></div>
-            <div style="float: left;" id="chart3"></div>
+            
           </td>
         </tr>
       </table>
@@ -142,20 +141,17 @@
   <!-- +++++ Information Section +++++ -->
   
   
-    <br>
+   
   <div class="row mt centered">
 
     <h2 style="color:purple">Please select for detailed analysis</h2>
       <br>
       <br>
 
-      <div class="col-lg-4">
-        <a class="zoom green" href="cropBubble.php"><img class="img-responsive" height="320" width="320" src="images/chartBubble.jpg" alt="" /></a>
-        <p>Select to Visualize top 20 crops in detail </p>
-      </div>
+    
      
       <div class="col-lg-4">
-        <a class="zoom green" href="mapText.php"><img class="img-responsive" height="320" width="320" src="images/calmap.jpg" alt="" /></a>
+        <a class="zoom green" href="mapText.php"><img class="img-responsive" height="320" width="320" src="images/CA_map.png" alt="" /></a>
         <p>Select to check harvested acres for various county for Crop Production</p>
       </div>
     </div><!-- /row -->
@@ -183,8 +179,10 @@
         </div><!-- /col-lg-4 -->
         
         <div class="col-lg-4">
-          <h4>About Agro-Visualizer</h4>
-          <p>AgroVisualizer is a data visualizer app to check California agriculture data and get statistical analysis for past 7 years.</p>
+          <h4>About AgroVisualizer</h4>
+          <p>AgroVisualizer shows the  agricultural data of California and its comparison in terms of various attributes which is useful to 
+different domain of people who can make use of these representations for analysis and to foresee future trends of production and 
+revenue from various crops in various county's</p>
         </div><!-- /col-lg-4 -->
       
       </div>

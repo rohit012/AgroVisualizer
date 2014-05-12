@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Agro-Visualizer </title>
+    <title>Predict Production </title>
 
     <!-- Bootstrap core CSS -->
     <link href="styles/bootstrap.css" rel="stylesheet">
@@ -25,47 +25,49 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript">
       google.load('visualization', '1.1', {packages: ['controls']});
+   
+      </script>
+
+
+
+   
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
     </script>
      
-    <script type='text/javascript'>
-     google.load('visualization', '1', {'packages': ['geochart']});
-     google.setOnLoadCallback(drawRegionsMap);
-     var chart, data;
-      function drawRegionsMap() {
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data;
 
 
-
-
-        var options = {
-        region: 'US-CA',
-        resolution:'provinces',
-        displayMode: 'text',
-        colorAxis: {colors: ['green', 'blue']},
-        magnifyingGlass: { enable:true , zoomFactor:1000}
-      };
-
-
-       var serverData = $.ajax({
-          url: '/routes/scatter.php',
+        var serverData = $.ajax({
+          url: '/routes/predictProductionRouter.php',
           dataType: 'json',
-          context: document.getElementById('chart_div'),
+          context: document.getElementById('visualization'),
           success: function(serverData) {
             data = new google.visualization.DataTable(serverData);
-            chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-
+            new google.visualization.LineChart(document.getElementById('visualization')).
+            draw(data, {curveType: "function",
+                        width: 1200, height: 550,
+                        hAxis: {title: 'Year', titleTextStyle: {fontSize: 16}},
+                        vAxis: {title: 'Value of Crops in millions of dollars', titleTextStyle: {fontSize: 16}}}
+                );
           }
         });
 
 
+      
+        // Create and draw the visualization.
+       
+      }
+      
 
-
-
-
-    };
-
-    
+      google.setOnLoadCallback(drawVisualization);
     </script>
+
+
+
   </head>
 
   <body>
@@ -94,61 +96,64 @@
     </div>
 
 
-      <h1 style="color:blue">Harvested acres for various county</h1>
-    <h3>Here is summary of harvested acres for various county, color and size of text represents Harvested acres </h3>
-    <br>
-    <br>
-  
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-    
-  <!-- +++++ Information Section +++++ -->
-  
-  
-    <br>
-    <br>
-    <br>
-    <br>
+	  	<h1 style="color:blue">Trend analysis of Production</h1>
+  	<h3>Production is predicted for years 2013 and 2014 </h3>
+  	<br>
+  	<br>
+	
 
+	<div id="visualization" style="width: 500px; height: 400px;"></div>
+    
+	<!-- +++++ Information Section +++++ -->
+	
+	
     <br>
-    <br>
-    <br>
+	
+	<br>
     <br>
   
+  <br>
+    <br>
   
+  <br>
+    <br>
   
-  <!-- +++++ Footer Section +++++ -->
-  
-  <div id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <h4>Copyright</h4>
-          <p>
-            CMPE-272, SJSU
-          </p>
-        </div><!-- /col-lg-4 -->
-        
-        <div class="col-lg-4">
-          <h4>My Links</h4>
-          <p>
-            
-            <a href="http://twitter.com">Follow us on Twitter</a><br/>
-            <a href="http://facebook.com">Like us on Facebook</a>
-          </p>
-        </div><!-- /col-lg-4 -->
-        
-        <div class="col-lg-4">
-          <h4>About AgroVisualizer</h4>
+  <br>
+    <br>
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>Copright</h4>
+					<p>
+						CMPE-272, SJSU
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						
+						<a href="http://twitter.com">Follow us on Twitter</a><br/>
+						<a href="http://facebook.com">Like us on Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>About AgroVisualizer</h4>
           <p>AgroVisualizer shows the  agricultural data of California and its comparison in terms of various attributes which is useful to 
 different domain of people who can make use of these representations for analysis and to foresee future trends of production and 
 revenue from various crops in various county's</p>
-        </div><!-- /col-lg-4 -->
-      
-      </div>
-    
-    </div>
-  </div>
-  
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

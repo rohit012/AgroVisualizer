@@ -26,20 +26,7 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
           
         };
 
-       /* var serverData2 = $.ajax({
-          url: 'yearwisecomparison2.json',
-          dataType: 'json',
-          context: document.getElementById('chart22'),
-          success: function (serverData2) {
-
-            data2 = new google.visualization.DataTable(serverData2);
-            chart22 = new google.visualization.LineChart(document.getElementById('chart22'));
-            chart22.draw(data2, options2);
-
-            console.log(data2);
-          }
-        });
-*/
+       
         var serverData = $.ajax({
           type: "POST",
           url: '/routes/mainRouter.php',

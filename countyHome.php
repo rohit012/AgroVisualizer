@@ -36,7 +36,7 @@
         // Create and populate the data table.
        
 
-        var options={title:"County and values over past 7 years",
+        var options={title:"County and revenue generated over past 7 years",
                   isStacked:"true",
                   width:1350, height:900,
                   vAxis: {title: "Value in million od dollars"},
@@ -82,10 +82,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Yearwise Analysis</a></li>
-            <li><a href="about.html">Countywise Analysis</a></li>
-            <li><a href="blog.html">Year Vs County</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
+            <li><a href="predictProduction.php">Production Prediction</a></li>
+            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -117,7 +117,7 @@
 
     <h2 style="color:purple">For detailed analysis on county click here</h2>
       <br>
-      <br>
+    
 
       <div class="col-lg-4">
         <a class="zoom green" href="countyBubble.php"><img class="img-responsive" src="images/cal_county.jpg" alt="" height="320" width="320" /></a>
@@ -126,12 +126,16 @@
       <div class="col-lg-4">
         <a class="zoom green" href="countyMap.php"><img class="img-responsive" src="images/maps_cal.png" alt="" height="320" width="320" /></a>
         <p>Click to see county details on map</p>
+
       </div>
      
       <!-- /row -->
 	<br>
   <br>
 	<br>
+    <br>
+  <br>
+  <br>
     <br>
   <br>
   <br>
@@ -168,8 +172,10 @@
 				</div><!-- /col-lg-4 -->
 				
 				<div class="col-lg-4">
-					<h4>About Agro-Visualizer</h4>
-					<p>AgroVisualizer is a data visualizer app to check California agriculture data and get statistical analysis for past 7 years.</p>
+					<h4>About AgroVisualizer</h4>
+          <p>AgroVisualizer shows the  agricultural data of California and its comparison in terms of various attributes which is useful to 
+different domain of people who can make use of these representations for analysis and to foresee future trends of production and 
+revenue from various crops in various county's</p>
 				</div><!-- /col-lg-4 -->
 			
 			</div>

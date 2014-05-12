@@ -69,7 +69,7 @@
 
   </head>
 
-  <body background ="/images/background/a.png">
+  <body>
 
 
     <!-- Static navbar -->
@@ -85,10 +85,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Yearwise Analysis</a></li>
-            <li><a href="about.html">Countywise Analysis</a></li>
-            <li><a href="blog.html">Year Vs County</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
+            <li><a href="predictProduction.php">Production Prediction</a></li>
+            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -116,9 +116,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<h4>Copright</h4>
+					<h4>Copyright</h4>
 					<p>
-						CMPE-272, SJSU
+						CMPE-272  SJSU
 					</p>
 				</div><!-- /col-lg-4 -->
 				
@@ -132,8 +132,10 @@
 				</div><!-- /col-lg-4 -->
 				
 				<div class="col-lg-4">
-					<h4>About Agro-Visualizer</h4>
-					<p>AgroVisualizer is a data visualizer app to check California agriculture data and get statistical analysis for past 7 years.</p>
+					<h4>About AgroVisualizer</h4>
+          <p>AgroVisualizer shows the  agricultural data of California and its comparison in terms of various attributes which is useful to 
+different domain of people who can make use of these representations for analysis and to foresee future trends of production and 
+revenue from various crops in various county's</p>
 				</div><!-- /col-lg-4 -->
 			
 			</div>

@@ -25,44 +25,55 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript">
       google.load('visualization', '1.1', {packages: ['controls']});
-    </script>
-    <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});
-    </script>
-    <script type="text/javascript">
-      function drawVisualization() {
-          // Create and populate the data table.
-          var data ;
-      
-          var options = {
-            title: 'Crops on basis of its Value and Production',
-            hAxis: {title: 'Value in million dollars'},
-            vAxis: {title: 'Production in million tons'},
-            bubble: {textStyle: {fontSize: 11}}
-          };
+   <script type="text/javascript">
 
+      function drawChart() {
 
+         var chart, data;
 
-           var serverData = $.ajax({
-          url: '/routes/cropBubbleRouter2.php',
+        var options2 = {
+          backgroundColor: {stroke: '#000', strokeWidth: 4, fill: '#bbb'},
+          curveType: 'function',
+          hAxis: {title: 'Year', titleTextStyle: {fontSize: 16}},
+          isStacked: true,
+          series: {1: {targetAxisIndex: 1, type: 'line'}},
+          seriesType: 'bars',
+          title: 'Year Vs Production vs Land harvested',
+          titleTextStyle: {fontSize: 18},
+          tooltip: {showColorCode: true},
+          vAxes: [
+            {title: 'Land harvested (in thousands of Hectares)', titleTextStyle: {fontSize: 16}},
+            {title: 'Total value of Produce (in Millions of dollars)', titleTextStyle: {fontSize: 16}}
+          ]
+        };
+
+        var serverData2 = $.ajax({
+          url: '/routes/Y1Router.php',
           dataType: 'json',
-          context: document.getElementById('visualization'),
+          context: document.getElementById('chart22'),
           success: function(serverData) {
-            data = new google.visualization.DataTable(serverData);
-            chart = new google.visualization.BubbleChart(this);
-            chart.draw(data, options);
+            data2 = new google.visualization.DataTable(serverData);
+            chart22 = new google.visualization.ComboChart(this);
+            chart22.draw(data2, options2);
+
+            console.log(data2);
           }
         });
 
+        
 
+        
+        
 
-
-      
       }
-      
 
-      google.setOnLoadCallback(drawVisualization);
+      google.load('visualization', '1.0', {
+        'packages': ['corechart'], 
+        'callback': drawChart
+      });
+
     </script>
+
 
   </head>
 
@@ -82,7 +93,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-           <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
+            <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
             <li><a href="predictvalue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
@@ -92,13 +103,13 @@
     </div>
 
 
-	  	<h1 style="color:blue">Welcome to Analyst dashboard</h1>
-  	<h3>Here is summary of total value of crops over past years  </h3>
+	  	<h1 style="color:blue">Welcome to Farmers dashboard</h1>
+  	<h3>Here is summary of total production of crops over these past years  </h3>
   	<br>
   	<br>
 	
 
-	<div id="visualization" style="width: 1000x; height: 800px;"></div>
+	<div id="chart22" style="width: 900px; height: 500px;"></div>
     
 	<!-- +++++ Information Section +++++ -->
 	
@@ -111,13 +122,13 @@
       <br>
 
       <div class="col-lg-4">
-        <a class="zoom green" href="cropHome.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port01.jpg" alt="" /></a>
-        <p>Select for Cropwise analysis</p>
+        <a class="zoom green" href="farmerCropBubble.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port01.jpg" alt="" /></a>
+        <p>Select for analysis on top 20 crops</p>
       </div>
      
       <div class="col-lg-4">
-        <a class="zoom green" href="countyHome.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port03.jpg" alt="" /></a>
-        <p>Select for Countywise analysis</p>
+        <a class="zoom green" href="mapText.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port03.jpg" alt="" /></a>
+        <p>Click to check details on graph</p>
       </div>
     </div><!-- /row -->
 	
