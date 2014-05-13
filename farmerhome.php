@@ -162,7 +162,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -214,7 +214,7 @@
       <br>
 
       <div class="col-lg-4">
-        <a class="zoom green" href="farmerCropBubble.php"><img class="img-responsive" height="320" width="320" src="images/cropfarm.jpg" alt="" /></a>
+        <a class="zoom green" href="farmerCropBubble.php"><img class="img-responsive" height="320" width="320" src="images/111.jpg" alt="" /></a>
         <p>Select for analysis on top 20 crops</p>
       </div>
      

@@ -84,7 +84,7 @@
           <ul class="nav navbar-nav navbar-right">
            <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -92,7 +92,7 @@
     </div>
 
 
-	  	<h1 style="color:blue">Welcome to Analyst dashboard</h1>
+	  	<h1 style="color:blue">Welcome to Crop Summary</h1>
   	<h3>Here is summary of total value of crops over past years  </h3>
   	<br>
   	<br>
@@ -104,22 +104,7 @@
 	
 	
     <br>
-	<div class="row mt centered">
-
-    <h2 style="color:purple">Please select for detailed analysis</h2>
-      <br>
-      <br>
-
-      <div class="col-lg-4">
-        <a class="zoom green" href="cropHome.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port01.jpg" alt="" /></a>
-        <p>Select for Cropwise analysis</p>
-      </div>
-     
-      <div class="col-lg-4">
-        <a class="zoom green" href="countyHome.php"><img class="img-responsive" height="320" width="320" src="images/portfolio/port03.jpg" alt="" /></a>
-        <p>Select for Countywise analysis</p>
-      </div>
-    </div><!-- /row -->
+	
 	
 	
 	<!-- +++++ Footer Section +++++ -->

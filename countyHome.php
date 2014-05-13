@@ -39,7 +39,7 @@
         var options={title:"County and revenue generated over past 7 years",
                   isStacked:"true",
                   width:1350, height:900,
-                  vAxis: {title: "Value in million od dollars"},
+                  vAxis: {title: "Value in million of dollars"},
                   hAxis: {title: "County of California"}};
 
       var serverData = $.ajax({
@@ -84,7 +84,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->

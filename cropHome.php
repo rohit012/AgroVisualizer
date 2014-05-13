@@ -109,7 +109,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -148,7 +148,10 @@
       <br>
       <br>
 
-    
+      <!--div class="col-lg-4">
+        <a class="zoom green" href="cropBubble.php"><img class="img-responsive" height="320" width="320" src="images/chartBubble.jpg" alt="" /></a>
+        <p>Select to Visualize top 20 crops in detail </p>
+      </div-->
      
       <div class="col-lg-4">
         <a class="zoom green" href="mapText.php"><img class="img-responsive" height="320" width="320" src="images/CA_map.png" alt="" /></a>

@@ -162,7 +162,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->

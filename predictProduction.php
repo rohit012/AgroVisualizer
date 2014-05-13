@@ -50,8 +50,7 @@
             new google.visualization.LineChart(document.getElementById('visualization')).
             draw(data, {curveType: "function",
                         width: 1200, height: 550,
-                        hAxis: {title: 'Year', titleTextStyle: {fontSize: 16}},
-                        vAxis: {title: 'Value of Crops in millions of dollars', titleTextStyle: {fontSize: 16}}}
+                        vAxis: {maxValue: 10}}
                 );
           }
         });
@@ -88,7 +87,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="yearVsProd2.php">Yearly Analysis</a></li>
             <li><a href="predictProduction.php">Production Prediction</a></li>
-            <li><a href="predictvalue.php">Revenue Prediction</a></li>
+            <li><a href="predictValue.php">Revenue Prediction</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
