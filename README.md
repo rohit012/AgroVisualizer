@@ -6,5 +6,5 @@ Hi, This is a redme file...
 updated in development branch
 
 
-
--------updated in master
+------updated in development , no master
+>>>>>>> develop
